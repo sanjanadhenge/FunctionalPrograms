@@ -14,7 +14,7 @@ namespace Functions
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option to execute the program 1. Filp Coin 2. Leap Year Check 3. Power of 2 4.Harmonic Number 5.Prime Factors 6.To Calculate Quotient and Reminder 7. Swapping Of two No 8.Even And Odd 9.Exit");
+                Console.WriteLine("Select an option to execute the program 1. Filp Coin 2. Leap Year Check 3. Power of 2 4.Harmonic Number 5.Prime Factors 6.To Calculate Quotient and Reminder 7. Swapping Of two No 8.Even And Odd 9.Check Alphabet 10.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -71,6 +71,12 @@ namespace Functions
                         evenOdd.CheckEvenOrOdd(Value);
                         break;
                     case 9:
+                         Console.WriteLine("Enter the Albhabet");
+                         char A = Convert.ToChar(Console.ReadLine());
+                         CheckAlphabet checkAlphabet = new CheckAlphabet();
+                         checkAlphabet.Check(A);
+                         break;
+                    case 10:
                         flag = false;
                         break;
                 }
