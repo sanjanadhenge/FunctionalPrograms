@@ -14,7 +14,7 @@ namespace Functions
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option to execute the program 1. Filp Coin 2. Leap Year Check 3. Power of 2 4.Harmonic Number 5.Exit");
+                Console.WriteLine("Select an option to execute the program 1. Filp Coin 2. Leap Year Check 3. Power of 2 4.Harmonic Number 5.Prime Factors 6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -43,6 +43,12 @@ namespace Functions
                         harmonicNumber.CalculateHarmonicValue(H);
                         break;
                     case 5:
+                        Console.WriteLine("Enter the number");
+                        int P = Convert.ToInt32(Console.ReadLine());
+                        PrimeFactor primeFactor = new PrimeFactor();
+                        primeFactor.PrimeFactorization(P);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
