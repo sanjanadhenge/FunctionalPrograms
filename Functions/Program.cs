@@ -14,7 +14,7 @@ namespace Functions
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option to execute the program 1. Filp Coin 2.Exit");
+                Console.WriteLine("Select an option to execute the program 1. Filp Coin 2. Leap Year Check 3.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -24,7 +24,13 @@ namespace Functions
                         FlipCoin flipCoin = new FlipCoin();
                         flipCoin.Flip(n);
                         break;
-                    case 2 :
+                    case 2:
+                        Console.WriteLine("Enter the year");
+                        int Year = Convert.ToInt32(Console.ReadLine());
+                        LeapYear leapYear = new LeapYear();
+                        leapYear.LeapYearCheck(Year);
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }
