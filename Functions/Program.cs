@@ -14,7 +14,7 @@ namespace Functions
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option to execute the program 1. Filp Coin 2. Leap Year Check 3.Exit");
+                Console.WriteLine("Select an option to execute the program 1. Filp Coin 2. Leap Year Check 3. Power of 2 4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -31,6 +31,13 @@ namespace Functions
                         leapYear.LeapYearCheck(Year);
                         break;
                     case 3:
+                        Console.WriteLine("Enter the Power number");
+                        int N = Convert.ToInt32(Console.ReadLine());
+                        PowerOf2 powerOf2 = new PowerOf2();
+                        powerOf2.CalculatePower(N);
+                        break;
+
+                    case 4:
                         flag = false;
                         break;
                 }
