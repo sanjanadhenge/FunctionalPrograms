@@ -14,7 +14,7 @@ namespace Functions
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option to execute the program 1. Filp Coin 2. Leap Year Check 3. Power of 2 4.Harmonic Number 5.Prime Factors 6.Exit");
+                Console.WriteLine("Select an option to execute the program 1. Filp Coin 2. Leap Year Check 3. Power of 2 4.Harmonic Number 5.Prime Factors 6.To Calculate Quotient and Reminder 7.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -49,6 +49,14 @@ namespace Functions
                         primeFactor.PrimeFactorization(P);
                         break;
                     case 6:
+                        Console.WriteLine("Enter the Dividend");
+                        int Dividend = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter the Divisor");
+                        int Divisor = Convert.ToInt32(Console.ReadLine());
+                        QuotientAndReminder quotientAndReminder = new QuotientAndReminder();
+                        quotientAndReminder.QueAndRem(Divisor, Dividend);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
