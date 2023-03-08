@@ -10,10 +10,9 @@ namespace Functions
     {
         public void SwapOfTwo(int a ,int b)
         {
-            int temp = 0;
-            temp = a;
-            a= b;
-            b= temp;
+            a= a+b;
+            b =a-b;
+            a=a-b;
             Console.WriteLine("After Swapping Numbers are {0},{1} ",a,b);
         }
     }
